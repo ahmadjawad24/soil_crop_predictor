@@ -1,59 +1,71 @@
-![assets_snapshot](https://github.com/user-attachments/assets/1c56816b-b44e-4fdf-8a09-4b66cea581a1)
+# 🌾 AgroEdaphix
 
+**Precision Edaphic Soil Profiling & Agronomic Crop Compatibility Engine**
 
-# 🌱 Soil Crop Predictor
-
-A machine learning-based web application that predicts the most suitable crop for cultivation based on soil features using a regression model.
-
-Built with Python, Scikit-learn, and Streamlit, this project demonstrates how regression models can guide agricultural decisions using real-world soil data.
+AgroEdaphix is a precision agriculture platform that utilizes machine learning and agronomic edaphic algorithms to recommend optimal crops, analyze nutrient deficits, and generate custom commercial fertilizer prescriptions based on soil physicochemical parameters.
 
 ---
 
-## 🚀 Features
+## ⚡ Key Capabilities
 
-- 🌾 Predicts optimal crop from soil data (N, P, K, pH, temperature, etc.)
-- 🧠 Trained using **Random Forest Regression**
-- 🎛️ Frontend built with **Streamlit** for instant interaction
-- 📦 Includes serialized model and label encoder
-- 🧪 Notebook for EDA, preprocessing, and model training
-
----
-
-## 📁 Project Structure
-
-| File/Folder                      | Description                                       |
-|----------------------------------|---------------------------------------------------|
-| `app.py`                         | Streamlit web app script                          |
-| `soil_crop_prediction.ipynb`     | Jupyter notebook for data processing and modeling |
-| `soil_measures_separated_large.csv` | Input dataset                                  |
-| `requirements.txt`              | Python dependencies                               |
-
+- **🧪 Edaphic Machine Learning Prediction**: Evaluates multidimensional soil chemistry vectors (Nitrogen, Phosphorus, Potassium, and pH reaction) against a comprehensive database of 22 agricultural crop profiles.
+- **📊 Soil Nutrient Deficit & Gap Analysis**: Visualizes physiological uptake bounds ($N$, $P$, $K$, $\text{pH}$) and quantifies precise elemental deficits ($\text{kg/ha}$) relative to crop-specific requirements.
+- **💊 Commercial Fertilizer Prescription Engine**: Automatically calculates exact quantities for standard commercial inputs (Urea $46\%\,\text{N}$, DAP $18\text{-}46\text{-}0$, MOP $60\%\,\text{K}_2\text{O}$, Agricultural Limestone / Gypsum) with multi-unit plot scaling ($\text{Hectares}$, $\text{Acres}$, $\text{m}^2$) and 50 kg bag estimations.
+- **🔍 Agronomic Matrix & Comparator**: Side-by-side comparative analysis of multiple crop candidates across soil chemistry tolerances, temperature, rainfall, and relative humidity.
+- **📜 Laboratory-Grade Advisory Certificates**: Generates formal, print-ready agronomic reports and CSV test log exports with local persistence.
 
 ---
 
-## 📊 Input Features
+## 🔬 Edaphic & Input Parameters
 
-- **Nitrogen (N)**
-- **Phosphorus (P)**
-- **Potassium (K)**
-- **Temperature**
-- **Humidity**
-- **pH**
-- **Rainfall**
-
----
-
-## 🧪 Model Used
-
-- Random Forest Regression
-- MAE, MSE, R² metrics used for evaluation
-- LabelEncoder used to convert regression outputs to crop names
+| Parameter | Symbol | Unit | Typical Range | Agronomic Significance |
+|---|---|---|---|---|
+| **Available Nitrogen** | $\text{N}$ | $\text{kg/ha}$ | $0 - 140$ | Vegetative growth, chlorophyll synthesis, and protein formation |
+| **Available Phosphorus** | $\text{P}$ | $\text{kg/ha}$ | $5 - 145$ | Root elongation, early plant vigor, and flowering/fruiting |
+| **Available Potassium** | $\text{K}$ | $\text{kg/ha}$ | $5 - 205$ | Osmotic regulation, disease resistance, and enzymatic activation |
+| **Soil Reaction** | $\text{pH}$ | $-\log[\text{H}^+]$ | $3.5 - 9.5$ | Nutrient bioavailability, cation exchange, and microbial activity |
 
 ---
 
-## ⚙️ Installation & Usage
+## 🛠️ Architecture & Tech Stack
 
-1. Clone the repo:
+- **Frontend & UI**: React 18, TypeScript, Tailwind CSS v4, Motion
+- **Build System**: Vite 6
+- **Icons & Visuals**: Lucide React
+- **Analytical Models**: Deterministic Weighted Normalized Euclidean Distance Vector Matcher & Multi-nutrient Balance Solver
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v18+ recommended)
+- npm or bun
+
+### Installation
+
+1. Install project dependencies:
    ```bash
-   git clone https://github.com/ahmedjawad24/soil_crop_predictor.git
-   cd soil_crop_predictor
+   npm install
+   ```
+
+2. Launch the local development server:
+   ```bash
+   npm run dev
+   ```
+
+3. Open your browser and navigate to `http://localhost:3000`.
+
+### Production Build
+
+Compile and bundle for production:
+```bash
+npm run build
+```
+
+---
+
+## 📄 License
+
+MIT

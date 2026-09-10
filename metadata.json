@@ -1,0 +1,6 @@
+{
+  "name": "AgroEdaphix",
+  "description": "Precision edaphic machine learning engine predicting optimal crop compatibility and fertilizer prescriptions from soil N, P, K, and pH physicochemical metrics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
